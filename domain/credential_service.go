@@ -33,7 +33,7 @@ func (s credentialService) SaveCredential(ctx context.Context, r SaveParams) err
 
 	if err = s.storage.Save(ctx, a); err != nil {
 		log.Printf("error: save core %v\n", err)
-		return fmt.Errorf("Error to save credential")
+		return fmt.Errorf("error to save credential")
 	}
 
 	return nil
@@ -43,7 +43,7 @@ func (s credentialService) ListCredentials(ctx context.Context) ([]Credential, e
 	list, err := s.storage.FindAll(ctx)
 	if err != nil {
 		log.Printf("error: find all credentials %v\n", err)
-		return list, fmt.Errorf("Error to find all credentials")
+		return list, fmt.Errorf("error to find all credentials")
 	}
 
 	return list, nil
@@ -52,7 +52,7 @@ func (s credentialService) ListCredentials(ctx context.Context) ([]Credential, e
 func (s credentialService) RemoveCredential(ctx context.Context, id CredentialID) error {
 	if err := s.storage.DeleteByID(ctx, id); err != nil {
 		log.Printf("error: remove core %v\n", err)
-		return fmt.Errorf("Error to remove credential")
+		return fmt.Errorf("error to remove credential")
 	}
 
 	return nil
