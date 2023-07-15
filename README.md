@@ -48,7 +48,7 @@ docker-compose up
 To run the application, execute the following command in the project directory:
 
 ``` bash
-go run main.go
+go run cmd/rest/main.go
 ```
 
 By default, the application will start a web server on <http://localhost:8089>. You can access the application using a web browser or integrate it with other systems.
@@ -61,7 +61,7 @@ The following API endpoints are available:
 - POST /api/v1/login: Logs in an existing user;
 - POST /api/v1/logout: Logs out the currently authenticated user
 - GET /api/v1/credentials: Retrieves the credentials;
-- DELETE /api/v1/credentials/:id: Deletes a credential account;
+- DELETE /api/v1/credentials/id: Deletes a credential account;
 
 ## Contributing
 
