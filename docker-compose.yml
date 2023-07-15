@@ -30,7 +30,7 @@ services:
       CREDENTIAL_NAME: ${CREDENTIAL_NAME}
       CREDENTIAL_PASSWORD: ${CREDENTIAL_PASSWORD}
     ports:
-      - "9876:9876"
+      - "8089:8089"
     depends_on:
       - db
     restart: unless-stopped

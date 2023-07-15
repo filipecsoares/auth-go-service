@@ -45,7 +45,7 @@ func main() {
 	dash.POST("/credentials", credentialH.HandleSaveCredential)
 	dash.DELETE("/credentials/:id", credentialH.HandleDeleteCredential)
 
-	e.Logger.Fatal(e.Start(":9876"))
+	e.Logger.Fatal(e.Start(":8089"))
 }
 
 func mustConnectDB(cf *config) *gorm.DB {
